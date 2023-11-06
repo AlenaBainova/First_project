@@ -11,16 +11,16 @@
           <div class="card mb-3" style="border-radius: .5rem;">
             <div class="row g-0">
               <div class="col-md-4 gradient-custom text-center text-white"
-                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem; background-color: #778899;">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                  alt="Avatar" class="img-fluid my-5" style="width: 100px;" />
+                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem; background-color: #0000CD;">
+                <img src="https://multiurok.ru/uploads/9/2/7/927468ed7e545f6ef8a7e343a794b78f6714d915/phpxACMKS_lsev777bfac4qsf4mcqmyf4ka6iwkv05.jpeg"
+                  alt="Avatar" class="img-fluid my-5" style="width: 150px;" />
                 
-                <p>Web Designer</p>
+                <p>Веб-дизайнер</p>
                 <i class="far fa-edit mb-5"></i>
               </div>
               <div class="col-md-8">
                 <div class="card-body p-4">
-                  <h6>Information</h6>
+                  <h6>Контакты</h6>
                   <hr class="mt-0 mb-4">
                   <div class="row pt-1">
                     <div class="col-6 mb-3">
@@ -28,23 +28,22 @@
                       {% if app.user %}
                         {{ app.user.email }} 
                       {% endif %}
-
                     </div>
                     <div class="col-6 mb-3">
-                      <h6>Phone</h6>
+                      <h6>Телефон</h6>
                       <p class="text-muted">123 456 789</p>
                     </div>
                   </div>
-                  <h6>Projects</h6>
+                  <h6>Проекты</h6>
                   <hr class="mt-0 mb-4">
                   <div class="row pt-1">
                     <div class="col-6 mb-3">
-                      <h6>Recent</h6>
-                      <p class="text-muted">Lorem ipsum</p>
+                      <h6>Последние</h6>
+                      <p class="text-muted">Live project</p>
                     </div>
                     <div class="col-6 mb-3">
-                      <h6>Most Viewed</h6>
-                      <p class="text-muted">Dolor sit amet</p>
+                      <h6>Самые просматриваемые</h6>
+                      <p class="text-muted">Shop Top</p>
                     </div>
                   </div>
                   <div class="d-flex justify-content-start">
@@ -56,11 +55,11 @@
               </div>
             </div>
           </div>
-            <button class="btn btn-lg btn-primary" type="submit" style="background-color: #f4f5f7;">
+            <button class="btn btn-lg btn-primary" type="submit" style="background-color: #f4f5f7; margin-left: 545px;">
                 {% if app.user %}
                     <a href="{{ path('app_logout')}}">Выйти</a>
                 {% endif %}
-                
+
             </button>
     
         </div>

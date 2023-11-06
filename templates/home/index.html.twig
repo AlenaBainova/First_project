@@ -1,20 +1,55 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Главная страница{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello Alena {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/OSPanel/domains/first_project/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/OSPanel/domains/first_project/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
+<div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Главная</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Курсы</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Программы</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Акции</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">О нас</a></li>
+      </ul>
+    </header>
 </div>
+
+
+<div class="container" style="margin-left: 500px; margin-top: 50px"">
+    <h1> Онлайн школа LearnHub</h1>
+    Добро пожаловать на обучение!
+</div>    
+
+
+<img src="https://priceactionltd.com/wp-content/uploads/2021/01/trader-2048x1365.jpg"
+    style="width: 500px; margin-left: 500px; margin-top: 50px" />
+
+<section class="">
+    <!-- Footer -->
+    <footer class="text-center fixed-bottom text-white" style="background-color: #0a4275;">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: CTA -->
+        <section class="">
+          <p class="d-flex justify-content-center align-items-center">
+            <span class="me-3">Скорее присоединяйся!</span>
+            <button type="button" class="btn btn-outline-light btn-rounded">
+              Вход
+            </button>
+          </p>
+        </section>
+        <!-- Section: CTA -->
+      </div>
+      <!-- Grid container -->
+  
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </section>
 {% endblock %}
