@@ -4,17 +4,7 @@
 
 {% block body %}
 
-<div class="container">
-    <header class="d-flex justify-content-center py-3">
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Главная</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Курсы</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Программы</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Акции</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">О нас</a></li>
-      </ul>
-    </header>
-</div>
+{%include 'home/navbarhome.html' %}
 
 
 <div class="container" style="margin-left: 500px; margin-top: 50px"">
@@ -26,30 +16,6 @@
 <img src="https://priceactionltd.com/wp-content/uploads/2021/01/trader-2048x1365.jpg"
     style="width: 500px; margin-left: 500px; margin-top: 50px" />
 
-<section class="">
-    <!-- Footer -->
-    <footer class="text-center fixed-bottom text-white" style="background-color: #0a4275;">
-      <!-- Grid container -->
-      <div class="container p-4 pb-0">
-        <!-- Section: CTA -->
-        <section class="">
-          <p class="d-flex justify-content-center align-items-center">
-            <span class="me-3">Скорее присоединяйся!</span>
-            <button type="button" class="btn btn-outline-light btn-rounded">
-              Вход
-            </button>
-          </p>
-        </section>
-        <!-- Section: CTA -->
-      </div>
-      <!-- Grid container -->
-  
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2023 Copyright
-      </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-  </section>
+{%include 'home/footerhome.html' %}   
+
 {% endblock %}
