@@ -12,10 +12,26 @@
     Добро пожаловать на обучение!
 </div>    
 
+<div class="example-wrapper">
+ 
+    {% for aticle in articles %}
+        <article>
+            <h2>{{ aticle.title }}</h2>
+           
+            <div class="article-content">
+                {{ aticle.body }}
+            </div>
+            <div>
+                Дата создания: {{ aticle.createdAt|date('d.m.Y H:i:s') }}, Автор: {{ ati.author }}
+            </div>
+        </article>
+    {% endfor %}
+</div>
 
 <img src="https://priceactionltd.com/wp-content/uploads/2021/01/trader-2048x1365.jpg"
     style="width: 500px; margin-left: 500px; margin-top: 50px" />
 
 {%include 'home/footerhome.html' %}   
+
 
 {% endblock %}

@@ -20,8 +20,6 @@ class ArticleEntityListener
     {
     }
 
-
-
     public function prePersist(PrePersistEventArgs $entity): void
     {
        /** @var Article $entity */
