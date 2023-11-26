@@ -12,17 +12,18 @@
     Добро пожаловать на обучение!
 </div>    
 
+
 <div class="example-wrapper">
- 
-    {% for aticle in articles %}
+    <a href="{{ path('admin.index') }}">Администрирование</a>
+    {% for item in articles %}
         <article>
-            <h2>{{ aticle.title }}</h2>
-           
+            <h2>{{ item.title }}</h2>
+            
             <div class="article-content">
-                {{ aticle.body }}
+                {{ item.body|raw|nl2br }}
             </div>
             <div>
-                Дата создания: {{ aticle.createdAt|date('d.m.Y H:i:s') }}, Автор: {{ ati.author }}
+                Дата создания: {{ item.createdAt|date('d.m.Y H:i:s') }}
             </div>
         </article>
     {% endfor %}
