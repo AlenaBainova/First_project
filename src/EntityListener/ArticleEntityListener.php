@@ -7,7 +7,6 @@ namespace App\EntityListener;
 use App\Entity\Article;
 use Doctrine\Bundle\DoctrineBundle\Attribute\AsEntityListener;
 use Doctrine\ORM\Event\PrePersistEventArgs;
-use Doctrine\ORM\Event\PreUpdateEventArgs;
 use Doctrine\ORM\Events;
 use Symfony\Bundle\SecurityBundle\Security;
 
@@ -15,16 +14,14 @@ use Symfony\Bundle\SecurityBundle\Security;
 
 class ArticleEntityListener
 {
-    public function __construct(
-        private readonly Security $security)
+    public function __construct(private readonly Security $security)
     {
     }
 
-    public function prePersist(PrePersistEventArgs $entity): void
+    public function prePersist(\App\Entity\Article $entity): void
     {
        /** @var Article $entity */
-       $entity = $entity->getObject();
-       $entity->setCreatedAt(new \DateTimeImmutable());
-       $entity->setAuthor($this->security->getUser());
+            $entity->setCreatedAt(new \DateTimeImmutable());
+            $entity->setAuthor($this->security->getUser());
     }
 }
