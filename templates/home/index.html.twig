@@ -18,7 +18,7 @@
     {% for item in articles %}
         <article>
             <h2>{{ item.title }}</h2>
-            
+            <a href="{{ path('app_article_edit', {'id': item.id}) }}">Редактировать</a>            
             <div class="article-content">
                 {{ item.body|raw|nl2br }}
             </div>
