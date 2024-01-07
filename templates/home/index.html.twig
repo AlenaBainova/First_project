@@ -6,15 +6,14 @@
 
 {%include 'home/navbarhome.html' %}
 
-
-<div class="container" style="margin-left: 500px; margin-top: 50px"">
-    <h1> Онлайн школа LearnHub</h1>
-    Добро пожаловать на обучение!
-</div>    
-
-
 <div class="example-wrapper">
     <a href="{{ path('admin.index') }}">Администрирование</a>
+    
+    {{ form_start(form, {attr: {"class": "d-inline"}}) }}
+    {{ form_widget(form) }}
+    <button class="btn btn-primary">Найти</button>
+    {{ form_end(form) }}    
+    
     {% for item in articles %}
         <article>
             <h2>{{ item.title }}</h2>
@@ -26,8 +25,13 @@
                 Дата создания: {{ item.createdAt|date('d.m.Y H:i:s') }}, Автор: {{ item.author }}
             </div>
         </article>
+    {% else %}
+        <div>Ничего не нашлось</div>    
     {% endfor %}
+    {{ pagerfanta(articles) }}    
 </div>
+
+
 
 <img src="https://priceactionltd.com/wp-content/uploads/2021/01/trader-2048x1365.jpg"
     style="width: 500px; margin-left: 500px; margin-top: 50px" />
