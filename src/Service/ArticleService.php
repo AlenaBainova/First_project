@@ -21,4 +21,8 @@ class ArticleService implements ArticleServiceInterface
         // здесь может быть кеш, здесь может быть математика
         return $this->articleRepository->getRecentArticles($count, $search);
     }
+    public function getSingleArticleById(int $id): ?Article
+    {
+        return $this->articleRepository->find($id);
+    }
 }
