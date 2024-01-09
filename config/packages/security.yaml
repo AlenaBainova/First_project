@@ -18,7 +18,7 @@ security:
             lazy: true
             provider: app_user_provider
             custom_authenticators:
-                - App\Security\ApiKeyAuthenticator            
+                - App\Security\ApiKeyAuthenticator           
         main:
             lazy: true
             provider: app_user_provider
@@ -44,6 +44,7 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/api, roles: ROLE_USER }
         - { path: ^/admin, roles: ROLE_ADMIN }        
         - { path: ^/, roles: PUBLIC_ACCESS }
         
