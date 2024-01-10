@@ -16,7 +16,7 @@
     
     {% for item in articles %}
         <article>
-            <h2>{{ item.title }}</h2>
+            <h2><a href="{{ path('article.show', {'article': item.id}) }}">{{ item.title }}</a></h2>
             <a href="{{ path('app_article_edit', {'id': item.id}) }}">Редактировать</a>            
             <div class="article-content">
                 {{ item.body|raw|nl2br }}
@@ -36,7 +36,7 @@
 <img src="https://priceactionltd.com/wp-content/uploads/2021/01/trader-2048x1365.jpg"
     style="width: 500px; margin-left: 500px; margin-top: 50px" />
 
-{%include 'home/footerhome.html' %}   
+
 
 
 {% endblock %}
