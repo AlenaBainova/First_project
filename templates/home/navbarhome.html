@@ -1,11 +1,10 @@
 <div class="container">
     <header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Главная</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Курсы</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Программы</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Акции</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">О нас</a></li>
+        <li class="nav-item"><a href="{{ path('homepage') }}" class="nav-link active" aria-current="page">Главная</a></li>
+        <li class="nav-item"><a href="{{ path('admin.index') }}" class="nav-link">Администрирование</a></li>
+        <li class="nav-item"><a href="{{ path('app_login') }}" class="nav-link">Вход</a></li>
+        <li class="nav-item"><a href="{{ path('app_register') }}" class="nav-link">Регистрация</a></li>
       </ul>
     </header>
 </div>
