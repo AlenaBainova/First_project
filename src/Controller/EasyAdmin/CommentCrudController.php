@@ -25,11 +25,11 @@ class CommentCrudController extends AbstractCrudController
             IdField::new('id')
                 ->hideOnForm(),
             EmailField::new('email'),
-            TextareaField::new('comment'),
-            DateTimeField::new('createdAt')
+            TextareaField::new('comment', 'Комментарий'),
+            DateTimeField::new('createdAt', 'Дата создания')
                 ->hideOnForm(),
-            AssociationField::new('status'),
-            AssociationField::new('author')
+            AssociationField::new('status', 'Статус'),
+            AssociationField::new('author', 'Автор')
                 ->hideOnForm()
         ];
     }
