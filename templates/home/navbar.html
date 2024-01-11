@@ -1,0 +1,32 @@
+<div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <div class="col-md-3 mb-2 mb-md-0">
+        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+          <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+      </div>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="{{ path('homepage') }}" class="nav-link active" aria-current="page">Главная</a></li>
+        <li class="nav-item"><a href="{{ path('admin') }}" class="nav-link">Администрирование</a></li>
+        <li class="nav-item"><a href="{{ path('app_profile') }}" class="nav-link">Профиль</a></li>
+      </ul>
+
+      <div>
+        {% if app.user %}
+            {{ app.user.userIdentifier }} 
+            <button type="button" class="btn btn-outline-primary me-2">
+                <a href="{{ path('app_logout') }}" class="nav-link">Выход</a>
+            </button>
+        {% else %}
+            <button type="button" class="btn btn-outline-primary me-2">
+                <a href="{{ path('app_login') }}" class="nav-link">Вход</a>
+            </button>
+            <button type="button" class="btn btn-primary">
+                <a href="{{ path('app_register') }}" class="nav-link" >Регистрация</a>
+            </button>
+        {% endif %}
+    </div>
+     
+    </header>
+  </div>
